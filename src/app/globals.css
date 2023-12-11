@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .text-content {
+    @apply text-base-800;
+  }
+
+  .text-ui {
+    @apply text-base-700;
+  }
+
+  .text-mute {
+    @apply text-base-600;
+  }
+
+  .text-disabled {
+    @apply text-base-500;
+  }
+
+  .bd-default {
+    @apply border-base-300;
+  }
+
+  .bd-active {
+    @apply border-base-400;
+  }
+
+  .bd-disabled {
+    @apply border-base-200;
+  }
+}
+
+@layer base {
+  body {
+    @apply text-content;
+  }
+}
