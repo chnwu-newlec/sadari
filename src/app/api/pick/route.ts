@@ -1,7 +1,17 @@
 import { NextResponse } from "next/server";
 
+let lastRandomIndex = -1;
+
 function getRandomElement(arr: any[]) {
-  const randomIndex = Math.floor(Math.random() * arr.length);
+  let randomIndex;
+  do {
+    randomIndex = Math.floor(Math.random() * arr.length);
+  } while (randomIndex === lastRandomIndex);
+
+  lastRandomIndex = randomIndex;
+
+  console.log(randomIndex);
+
   return arr[randomIndex];
 }
 
